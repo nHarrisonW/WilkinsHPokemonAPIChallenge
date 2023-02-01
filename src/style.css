@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wood-background, html {
+    background-image: url(../Assets/wood-bg.jpeg);
+    background-size: cover;
+}
+#Head-bg {
+    background-color: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#Head-img {
+    height: 100px;
+    padding-top: 3px;
+}
+#Hero-img {
+    width: 100%;
+}
+#Search-hero {
+    height: 150px;
+}
+
+.search-content {
+    
+}
