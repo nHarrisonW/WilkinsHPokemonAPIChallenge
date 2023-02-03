@@ -6,6 +6,9 @@
   <link rel="shortcut icon" href="../Assets/ash-favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./style.css">
   <link href="/dist/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anaheim&family=Sofia+Sans+Extra+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wood-background container-fluid">
@@ -14,12 +17,34 @@
         </div>
         <img src="../Assets/pokemon-kirby-bg.webp" alt="" id="Hero-img">
         <div class="search-content">
-            <div class="col-6">
-                <input type="search" name="Searchbar" id="Search-bar" placeholder="Search here...">
-            </div>
-            <div class="col-6">
-                <img src="../Assets/ash-hero-2.webp" alt="" id="Search-hero">
-            </div>
+            <div class="topnav">
+                <div class="menu-items">
+                    <button onclick="searchRandomPokemon().then(data => console.log(data))">Random</button>
+                    <button onclick="searchPokemon(document.getElementById('input').value)">
+                        Search
+                      </button>
+                    <input id="input" class="col-6" type="text" placeholder="Search..">
+                    <h1 class="home">Search a Pokemon by name or ID!</h1>
+                </div>
+              </div>
+              <div class="java-content hiding">
+                <h1 id="pokemon-id">001</h1>
+                <h1 id="pokemon-name">Bulbasaur</h1>
+                <div class="container">
+                    <div id="sprites">
+                        <p id="output"></p>
+                    </div>
+                    <div id="pond">
+                        <p class="" id="">Element:</p>
+                        <p class="" id="pokemon-type">Grass/Poison</p>
+                    </div>
+                    <div id="pond">
+                        <p class="" id="">Location:</p> 
+                        <p class="" id="pokemon-location">Pallet Town</p>        
+                    </div>
+
+                </div>
+              </div>
         </div>
 
     </div>

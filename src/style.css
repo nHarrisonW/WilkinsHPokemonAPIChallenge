@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 .wood-background, html {
     background-image: url(../Assets/wood-bg.jpeg);
     background-size: cover;
@@ -24,5 +26,77 @@
 }
 
 .search-content {
-    
+
 }
+.topnav {
+    overflow: hidden;
+    padding: 5% 10% 0 10%;
+  }
+/* Style the links inside the navigation bar */
+.topnav a, button {
+    display: inline;
+    align-items: center;
+    color: white;
+    padding: 4px 8px;
+    text-decoration: none;
+    font-size: 3vw;
+    justify-content: space-around;
+    background-color: #15147B;
+    border-radius: 12px;
+  }
+  .topnav a:hover {
+    background-color: hsl(241, 72%, 28%);
+    color: yellow;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+  /* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    float: right;
+    border: black;
+    font-size: 3vw;
+    width: 60%;height: 5.5vw;
+    background-color: #EAE5E5;
+    border-radius: 4px;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  }
+  .menu-items {
+    justify-content: space-around;
+  }
+.java-content h1{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    font-size: 8vw;
+    padding: 0;
+}
+.java-content p {
+    display: table;
+    font-family: 'Anaheim', sans-serif;
+    font-size: 5vw;
+}
+
+.home {
+    display: table;
+    width: 60%;
+    margin: 3% 0 0 10% ;
+    font-size: 6vw;
+    font-family: 'Anaheim', sans-serif;
+}
+#pond {
+    display: flex;
+    justify-content: space-evenly;
+}
+#sprites {
+    display: flex;
+}
+
+
+
+  /* MEDIA QUERIES */
+  @media only screen and (max-width: 350px)  {
+    .topnav a, button{
+        font-size: 2.5vw;
+    }
+  }
