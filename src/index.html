@@ -1,15 +1,18 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../Assets/ash-favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./style.css">
-  <link href="/dist/output.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anaheim&family=Sofia+Sans+Extra+Condensed&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Assets/ash-favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anaheim&family=Sofia+Sans+Extra+Condensed&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="wood-background container-fluid">
         <div id="Head-bg">
@@ -17,37 +20,67 @@
         </div>
         <img src="../Assets/pokemon-kirby-bg.webp" alt="" id="Hero-img">
         <div class="search-content">
+            <!-- area for buttons and input -->
             <div class="topnav">
-                <div class="menu-items">
-                    <button onclick="searchRandomPokemon().then(data => console.log(data))">Random</button>
-                    <button onclick="searchPokemon(document.getElementById('input').value)">
-                        Search
-                      </button>
+                <div class="menu-items flex">
+                    <button id="fav-button">❤</button>
+                    <button onclick="searchRandomPokemon()">🔀</button>
+                    <button onclick="searchPokemon(document.getElementById('input').value)">🔎</button>
                     <input id="input" class="col-6" type="text" placeholder="Search..">
-                    <h1 class="home">Search a Pokemon by name or ID!</h1>
                 </div>
-              </div>
-              <div class="java-content hiding">
+                <h1 class="home">Search a Pokemon by name or ID!</h1>
+            </div>
+            <div class="java-content">
+                <!-- main-info -->
                 <h1 id="pokemon-id">001</h1>
                 <h1 id="pokemon-name">Bulbasaur</h1>
-                <div class="container">
-                    <div id="sprites">
-                        <p id="output"></p>
-                    </div>
-                    <div id="pond">
-                        <p class="" id="">Element:</p>
-                        <p class="" id="pokemon-type">Grass/Poison</p>
-                    </div>
-                    <div id="pond">
-                        <p class="" id="">Location:</p> 
-                        <p class="" id="pokemon-location">Pallet Town</p>        
-                    </div>
-
+                <div class="flex justify-center" id="pond">
+                    <p class="" id="">Element:</p>
+                    <p class="" id="pokemon-type">Grass/Poison</p>
                 </div>
-              </div>
+                <!-- location -->
+                <div class="flex justify-center" id="pond">
+                    <p class="" id="">Location:</p>
+                    <p class="" id="pokemon-location">Pallet Town</p>
+                </div>
+                <div class="sprite-type flex justify-center">
+                    <p>Regular</p>
+                    <p>Shiny</p>
+                </div>
+                <!-- sprites -->
+                <div class="sprites flex justify-center ">
+                    <img class=" " src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+                        alt="" id="pokemon-pic">
+                    <img class=" "
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png"
+                        alt="" id="pokemon-shiny">
+                </div>
+                <!-- elovution tree -->
+                <div class="evo-tree flex align-middle">
+                    <p class="m-5">Evolution Tree :</p>
+                    <p class=" m-5 poke-evo-line">Bulbasaur => Ivysaur => Venusaur</p>
+                </div>
+                <!-- abilities box -->
+                <div class="p-4 my-4 mx-4 grid-cols-6 bg-white shadow rounded">
+                    <h2>ABILITIES</h2>
+                    <p class="poke-abilities-list">HYPER-CUTTER, SAND-VEIL, POISON-HEAL</p>
+                </div>
+                <!-- moves box -->
+                    <div class="p-4 mx-4 bg-white  shadow rounded">
+                        <button id="moves-on" class="text-black bg-transparent">MOVES LIST ▶</button>
+                        <button id="moves-off" class="text-black bg-transparent hiding">MOVES LIST 🔽</button>
+                        <p id="" class="poke-move-list hiding">RAZOR-WIND, SWORDS-DANCE, CUT, BIND, VINE-WHIP, HEADBUTT, TACKLE, BODY-SLAM, TAKE-DOWN, DOUBLE-EDGE, GROWL, STRENGTH, MEGA-DRAIN, LEECH-SEED, GROWTH, RAZOR-LEAF, SOLAR-BEAM, POISON-POWDER, SLEEP-POWDER, PETAL-DANCE, STRING-SHOT, TOXIC, RAGE, MIMIC, DOUBLE-TEAM, DEFENSE-CURL, LIGHT-SCREEN, REFLECT, BIDE, SLUDGE, SKULL-BASH, AMNESIA, FLASH, REST, SUBSTITUTE, SNORE, CURSE, PROTECT, SLUDGE-BOMB, MUD-SLAP, OUTRAGE, GIGA-DRAIN, ENDURE, CHARM, FALSE-SWIPE, SWAGGER, FURY-CUTTER, ATTRACT, SLEEP-TALK, RETURN, FRUSTRATION, SAFEGUARD, SWEET-SCENT, SYNTHESIS, HIDDEN-POWER, SUNNY-DAY, ROCK-SMASH, FACADE, NATURE-POWER, HELPING-HAND, INGRAIN, KNOCK-OFF, SECRET-POWER, WEATHER-BALL, GRASS-WHISTLE, BULLET-SEED, MAGICAL-LEAF, NATURAL-GIFT, WORRY-SEED, SEED-BOMB, ENERGY-BALL, LEAF-STORM, POWER-WHIP, CAPTIVATE, GRASS-KNOT, VENOSHOCK, ROUND, ECHOED-VOICE, GRASS-PLEDGE, WORK-UP, GRASSY-TERRAIN, CONFIDE, GRASSY-GLIDE</p>
+                    </div>
+                
+                  
+
+
+            </div>
         </div>
 
     </div>
+    
     <script src="./app.js"></script>
 </body>
+
 </html>

@@ -21,9 +21,6 @@
 #Hero-img {
     width: 100%;
 }
-#Search-hero {
-    height: 150px;
-}
 
 .search-content {
 
@@ -68,35 +65,56 @@
     justify-content: center;
     display: flex;
     font-family: 'Sofia Sans Extra Condensed', sans-serif;
-    font-size: 8vw;
+    font-size: 4vw;
     padding: 0;
+}
+.java-content h2{
+  font-family: 'Anaheim', sans-serif;
+  font-size: 4vw;
+  padding: 0;
+}
+.java-content button{
+  font-size: 4vw;
+  font-family: 'Anaheim', sans-serif;
+  padding: 0;
+
 }
 .java-content p {
     display: table;
     font-family: 'Anaheim', sans-serif;
-    font-size: 5vw;
+    font-size: 3vw;
 }
 
 .home {
     display: table;
     width: 60%;
     margin: 3% 0 0 10% ;
-    font-size: 6vw;
+    font-size: 4vw;
     font-family: 'Anaheim', sans-serif;
 }
 #pond {
     display: flex;
     justify-content: space-evenly;
 }
-#sprites {
-    display: flex;
+.sprites {
+  height: 90px;
 }
-
-
-
+.sprite-type p{
+  font-size: 6vw;
+  padding: 2% 4%;
+}
+.hiding {
+  display: none !important;
+}
   /* MEDIA QUERIES */
   @media only screen and (max-width: 350px)  {
     .topnav a, button{
         font-size: 2.5vw;
+    }
+  }
+
+  @media only screen and (min-width: 900px)  {
+    .sprites {
+      height: 15vw;
     }
   }
